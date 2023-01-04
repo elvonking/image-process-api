@@ -1,17 +1,13 @@
 import express from 'express';
-// import sharp from 'sharp';
+import routes from './routes/index';
 
 const app = express();
 const port = 3000;
 
-// define route for default home page
-app.get('/api', (req, res) => {
-  res.send("We're getting started...");
-});
+app.use(routes);
 
-// start the express server
-app.listen(port, (): void => {
-  console.log(`server started at http://localhost:${port}`);
+app.listen(port, async (): Promise<void> => {
+  console.log(`The server started at http://localhost:${port}`);
 });
 
 export default app;
