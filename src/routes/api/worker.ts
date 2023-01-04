@@ -7,7 +7,7 @@ images.get('/', async (req: express.Request, res: express.Response) => {
   const filename = req.query.filename?.toString();
   const height = req.query.height?.toString();
   const width = req.query.width?.toString();
-
+  
   //check for query parameters from the request url
   const acceptedFilename = ImageToolbox.isFileName(filename);
   const acceptedHeight = ImageToolbox.isRealNumber(height);
@@ -15,7 +15,7 @@ images.get('/', async (req: express.Request, res: express.Response) => {
 
   if (!acceptedFilename) {
     res.send(
-      `All image parameters are required.`
+      `All image parameters are required, the filename is invalid.`
     );
   } else if (!acceptedHeight) {
     res.send(
