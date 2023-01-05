@@ -7,6 +7,6 @@ routes.get('/', (req: express.Request, res: express.Response): void => {
   res.send('Image Processing API is running...');
 });
 
-routes.use('/api/images', images);
+routes.use('/images', images);
 
 export default routes;
