@@ -3,7 +3,7 @@ import ImageToolbox from '../../utilities/utilities';
 
 const images = express.Router();
 
-images.get('/', async (req: express.Request, res: express.Response) => {
+images.get('/', async (req: express.Request, res: express.Response): Promise<void> => {
   const filename = req.query.filename?.toString();
   const height = req.query.height?.toString();
   const width = req.query.width?.toString();
