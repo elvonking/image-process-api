@@ -1,4 +1,4 @@
-This is my first submission for the image processing api in the udacity full stack javascript developer nanodegree.
+This is an image processing api that can be used to change the size of an image.
 Existing image file names are the default images provided in the project challenge.
 
 ##### You can edit the filename parameter to confirm that the api works for the following images:
